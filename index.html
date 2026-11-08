@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dash Blast – Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the Dash Blast mobile game by tinmintstudio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg1: #3a1c8c;
+    --bg2: #5b2fc9;
+    --card: #ffffff;
+    --ink: #2a2350;
+    --muted: #6b6490;
+    --accent: #ffd54a;
+    --accent2: #3fd0ff;
+    --line: #ece8fb;
+    --chip: #f3efff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --card: #1e1838;
+      --ink: #efeaff;
+      --muted: #b3a9dc;
+      --line: #322a57;
+      --chip: #2a2250;
+    }
+  }
+  :root[data-theme="dark"] {
+    --card: #1e1838;
+    --ink: #efeaff;
+    --muted: #b3a9dc;
+    --line: #322a57;
+    --chip: #2a2250;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Nunito", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg1);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(63,208,255,.25), transparent 40%),
+      radial-gradient(circle at 85% 0%, rgba(255,213,74,.22), transparent 35%),
+      linear-gradient(160deg, var(--bg2), var(--bg1) 60%);
+    background-attachment: fixed;
+    line-height: 1.65;
+  }
+  /* floating blocks decor */
+  .decor { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .decor span {
+    position: absolute; width: 46px; height: 46px; border-radius: 10px;
+    border: 3px solid rgba(255,255,255,.12); transform: rotate(18deg);
+  }
+  .decor span:nth-child(1) { top: 8%;  left: 6%; }
+  .decor span:nth-child(2) { top: 30%; right: 7%; width: 60px; height: 60px; transform: rotate(-12deg); }
+  .decor span:nth-child(3) { top: 65%; left: 4%; width: 34px; height: 34px; }
+  .decor span:nth-child(4) { top: 85%; right: 12%; transform: rotate(30deg); }
+
+  .wrap { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 16px 48px; }
+
+  header.hero { text-align: center; color: #fff; padding: 56px 0 36px; }
+  .logo {
+    display: inline-flex; gap: 6px; margin-bottom: 18px;
+  }
+  .logo i {
+    width: 26px; height: 26px; border-radius: 6px; display: block;
+    box-shadow: inset 0 -5px 0 rgba(0,0,0,.18), inset 0 4px 0 rgba(255,255,255,.35);
+  }
+  .logo i:nth-child(1) { background: #ffd54a; }
+  .logo i:nth-child(2) { background: #3fd0ff; transform: translateY(-8px); }
+  .logo i:nth-child(3) { background: #ff6fa8; }
+  .logo i:nth-child(4) { background: #6be36b; transform: translateY(-8px); }
+  h1 {
+    font-family: "Fredoka", sans-serif; font-weight: 700;
+    font-size: clamp(34px, 7vw, 54px); line-height: 1.1; margin: 0;
+    text-shadow: 0 4px 0 rgba(0,0,0,.18);
+  }
+  h1 small { display: block; font-size: .45em; font-weight: 600; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; margin-top: 10px; }
+  .meta { margin-top: 14px; color: rgba(255,255,255,.8); font-size: 15px; }
+
+  .card {
+    background: var(--card); border-radius: 22px; padding: 28px clamp(18px, 4vw, 40px);
+    box-shadow: 0 18px 40px rgba(20,8,60,.35);
+  }
+  .summary {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px;
+    margin-bottom: 28px;
+  }
+  .pill {
+    background: var(--chip); border-radius: 16px; padding: 14px 16px; font-size: 14.5px;
+  }
+  .pill b { display: block; font-family: "Fredoka", sans-serif; font-size: 17px; margin-bottom: 2px; }
+
+  nav.toc { border: 2px dashed var(--line); border-radius: 16px; padding: 14px 18px; margin-bottom: 28px; }
+  nav.toc strong { font-family: "Fredoka", sans-serif; }
+  nav.toc ol { margin: 8px 0 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+  nav.toc a { color: var(--ink); text-decoration: none; }
+  nav.toc a:hover { color: #7a4cff; text-decoration: underline; }
+
+  section { padding-top: 10px; margin-bottom: 18px; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; }
+  h2 {
+    font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 22px;
+    display: flex; align-items: center; gap: 10px; margin: 18px 0 8px;
+  }
+  h2 .n {
+    flex: none; width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center;
+    background: linear-gradient(180deg, #8c5cff, #5b2fc9); color: #fff; font-size: 15px;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.2);
+  }
+  p, li { color: var(--ink); }
+  .muted { color: var(--muted); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 10px 0; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: "Fredoka", sans-serif; font-weight: 600; background: var(--chip); }
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); }
+  a { color: #7a4cff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) a { color: #b79bff; } }
+
+  .contact {
+    margin-top: 24px; border-radius: 18px; padding: 20px 22px; color: #fff;
+    background: linear-gradient(135deg, #7a4cff, #3fa0ff);
+  }
+  .contact h2 { margin-top: 0; color: #fff; }
+  .contact a { color: #fff; font-weight: 700; }
+  footer { text-align: center; color: rgba(255,255,255,.75); font-size: 14px; margin-top: 28px; }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    header.hero { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="decor"><span></span><span></span><span></span><span></span></div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <h1>Dash Blast<small>Privacy Policy</small></h1>
+    <div class="meta">Last updated: 8 November 2026</div>
+  </header>
+
+  <main class="card">
+    <p>This Privacy Policy explains how <strong>tinmintstudio</strong> ("we", "us") handles information when you play <strong>Dash Blast</strong> (the "Game") on Android. We keep data collection to the minimum needed to run the Game, save your progress and show ads.</p>
+
+    <div class="summary">
+      <div class="pill"><b>No account needed</b>You can play without giving us your name or email.</div>
+      <div class="pill"><b>Your choice</b>Gameplay analytics only run if you allow them.</div>
+      <div class="pill"><b>Ads</b>Shown by Google AdMob, with consent where the law requires it.</div>
+      <div class="pill"><b>We never sell</b>We do not sell your personal information.</div>
+    </div>
+
+    <nav class="toc">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#use">How we use it</a></li>
+        <li><a href="#partners">Third-party services</a></li>
+        <li><a href="#ads">Advertising &amp; consent</a></li>
+        <li><a href="#purchases">In-app purchases</a></li>
+        <li><a href="#retention">Storage &amp; retention</a></li>
+        <li><a href="#rights">Your choices &amp; rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section id="collect">
+      <h2><span class="n">1</span>Information we collect</h2>
+      <ul>
+        <li><strong>Game progress:</strong> high score, coins, boosters, settings and your current game, saved on your device and backed up to the cloud so you don't lose progress.</li>
+        <li><strong>Player identifiers:</strong> a random player ID created by Unity Gaming Services and, if you sign in, your Google Play Games player ID. These are used to link your saved progress to you.</li>
+        <li><strong>Device and advertising data:</strong> device model, operating system, language, approximate location (country/region from IP address) and the Android advertising ID, collected by our ad partner.</li>
+        <li><strong>Gameplay analytics (only with your permission):</strong> events such as games played, scores, boosters used and ads watched. You decide this in the first-launch popup and can change it any time in Settings.</li>
+        <li><strong>Purchase records:</strong> which items you bought and a transaction ID. Payment details are handled by Google Play – we never see your card information.</li>
+      </ul>
+      <p class="muted">We do not collect your name, email, contacts, photos or precise GPS location.</p>
+    </section>
+
+    <section id="use">
+      <h2><span class="n">2</span>How we use it</h2>
+      <ul>
+        <li>To run the Game and save and restore your progress across devices.</li>
+        <li>To deliver items you purchase and restore them (e.g. "No Ads").</li>
+        <li>To show ads and reward you for watching optional videos.</li>
+        <li>To understand how the Game is played and improve it (only if you allow analytics).</li>
+        <li>To turn features on or off remotely and fix problems.</li>
+      </ul>
+    </section>
+
+    <section id="partners">
+      <h2><span class="n">3</span>Third-party services</h2>
+      <p>The Game uses the services below. Each processes data under its own privacy policy:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Service</th><th>Purpose</th><th>Policy</th></tr>
+          <tr><td>Google AdMob &amp; User Messaging Platform</td><td>Ads and ad consent</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
+          <tr><td>Google Play Games Services</td><td>Sign-in, linking your progress</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
+          <tr><td>Google Play Billing</td><td>In-app purchases</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td></tr>
+          <tr><td>Unity Gaming Services (Authentication, Cloud Save, Remote Config, Analytics)</td><td>Player ID, cloud backup, feature settings, analytics</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="ads">
+      <h2><span class="n">4</span>Advertising &amp; consent</h2>
+      <p>The Game shows ads between games and optional reward videos (for example, to continue a game or earn coins). Ads are provided by Google AdMob, which may use your advertising ID to show personalised ads.</p>
+      <ul>
+        <li>If you are in the European Economic Area, the UK or Switzerland, we ask for your consent before personalised ads are shown. You can change your choice any time from <strong>Settings → Privacy Options</strong>.</li>
+        <li>You can reset or delete your advertising ID in your Android settings (<em>Settings → Google → Ads</em>).</li>
+        <li>Buying "No Ads" removes ads between games. Optional reward videos stay available if you want them.</li>
+      </ul>
+    </section>
+
+    <section id="purchases">
+      <h2><span class="n">5</span>In-app purchases</h2>
+      <p>Purchases are processed by Google Play. We receive only a confirmation and transaction ID so we can deliver your items. Refunds are handled under Google Play's refund policy.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="n">6</span>Storage &amp; retention</h2>
+      <p>Your progress is stored on your device and on Unity's cloud servers, which may be located outside your country. We keep it for as long as you play. Analytics data is kept only as long as needed to improve the Game, and is deleted on request.</p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="n">7</span>Your choices &amp; rights</h2>
+      <ul>
+        <li><strong>Analytics:</strong> turn it off any time in Settings. Turning it off also requests deletion of analytics data already collected.</li>
+        <li><strong>Ads consent:</strong> change it in Settings → Privacy Options (where available).</li>
+        <li><strong>Access or delete your data:</strong> email us (see below) and we will help. Depending on where you live (e.g. GDPR, UK GDPR, CCPA), you may have the right to access, correct, delete or object to processing of your data.</li>
+        <li><strong>Uninstalling</strong> the Game removes local data from your device.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2><span class="n">8</span>Children</h2>
+      <p>Dash Blast is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has given us information, contact us and we will delete it.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="n">9</span>Security</h2>
+      <p>Data is sent over encrypted connections and stored with trusted providers. No method is 100% secure, but we take reasonable steps to protect your information.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="n">10</span>Changes to this policy</h2>
+      <p>We may update this policy from time to time. The "Last updated" date at the top will show when it changed. Continuing to play after changes means you accept the updated policy.</p>
+    </section>
+
+    <div class="contact" id="contact">
+      <h2><span class="n" style="background:#fff;color:#5b2fc9">11</span>Contact us</h2>
+      <p style="color:#fff;margin:0">Questions or data requests? Email <a href="mailto:tinmintstudio@gmail.com">tinmintstudio@gmail.com</a> — we usually reply within a few days.</p>
+    </div>
+  </main>
+
+  <footer>© 2026 tinmintstudio · Dash Blast</footer>
+</div>
+</body>
+</html>
